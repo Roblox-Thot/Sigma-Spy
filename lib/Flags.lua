@@ -35,7 +35,7 @@ local Module = {
             Label = "Paused",
             Keybind = Enum.KeyCode.Q
         },
-        Paused = {
+        BlockAll = {
             Value = false,
             Label = "Block All",
             Keybind = Enum.KeyCode.X

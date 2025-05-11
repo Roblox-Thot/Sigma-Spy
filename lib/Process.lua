@@ -217,7 +217,7 @@ function Process:Callback(Data: RemoteData, ...): table?
     --// Check if the Remote is Blocked
     if RemoteData.Blocked then return {} end
 
-    if Flags:GetFlagValue("CheckCaller") then return {} end
+    if Flags:GetFlagValue("BlockAll") then return {} end
 
     --// Check for a spoof
     local Spoof = self:GetRemoteSpoof(Remote, Method, OriginalFunc, ...)
