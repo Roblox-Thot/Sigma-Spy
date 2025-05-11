@@ -93,6 +93,7 @@ function Process:Init(Data)
     local Modules = Data.Modules
 
     --// Modules
+	Flags = Modules.Flags
     Ui = Modules.Ui
     Hook = Modules.Hook
     Communication = Modules.Communication
@@ -215,6 +216,8 @@ function Process:Callback(Data: RemoteData, ...): table?
 
     --// Check if the Remote is Blocked
     if RemoteData.Blocked then return {} end
+
+    if Flags:GetFlagValue("CheckCaller") then return {} end
 
     --// Check for a spoof
     local Spoof = self:GetRemoteSpoof(Remote, Method, OriginalFunc, ...)

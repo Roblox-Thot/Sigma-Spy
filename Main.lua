@@ -21,7 +21,7 @@
 local Configuration = {
 	UseWorkspace = false, 
 	NoActors = false,
-	RepoUrl = "https://raw.githubusercontent.com/depthso/Sigma-Spy/refs/heads/main",
+	RepoUrl = "https://raw.githubusercontent.com/Roblox-Thot/Sigma-Spy/refs/heads/main",
 	ParserUrl = "https://raw.githubusercontent.com/depthso/Roblox-parser/refs/heads/main"
 }
 
