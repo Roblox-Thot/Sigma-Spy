@@ -68,6 +68,7 @@ local Process = {
 }
 
 --// Modules
+local Flags
 local Hook
 local Communication
 local ReturnSpoofs
@@ -93,7 +94,9 @@ function Process:Init(Data)
     local Modules = Data.Modules
 
     --// Modules
-	Flags = Modules.Flags
+    if Flags == nil then
+        Flags = Modules.Flags
+    end
     Ui = Modules.Ui
     Hook = Modules.Hook
     Communication = Modules.Communication
